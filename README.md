@@ -121,15 +121,25 @@ Potential extensions include:
 - Modeling more complex building layouts and room characteristics.
 - Integrating real-time sensors and embedded hardware for practical testing.
 
-### Author
 
-**Sreepriya Damuluru**
+## These are my core project models
 
-Department of Computer Science  
-Vanderbilt University
+	1	MultiRoomHeating4x2.mo - Base thermal model
+	2	MultiRoomHeating4x2_Scheduled.mo - Synchronous centralized scheduling
+	3	MultiRoomHeating4x2_SyncPulse_v3.mo - Clean synchronous version using timed tick
+	4	MultiRoomHeating4x2_AsyncJitter.mo - Basic asynchronous version
+	5	MultiRoomHeating4x2_AsyncJitter_Tuned.mo - Improved asynchronous independence
+	1	MultiRoomHeating4x2_AsyncJitter_Faults.mo - Communication delay / fault simulation
+	1	MultiRoomHeating4x2_AsyncJitter_Tuned_Energy.mo -  Asynchronous energy and comfort 
+	2	MultiRoomHeating4x2_Scheduled_Energy.mo - synchronous energy and comfort  
+## libraries
+I manually installed Modelica_StateGraph2 or the RealTimeCoordinationLibrary:
+	•	     RealTimeCoordinationLibrary
+	•	     Modelica_StateGraph2  
 
-**Project Type:** Individual Graduate Course Project
-
-### Documentation
-
-The complete final project report is available in the `docs/` directory of this repository.
+## Plots:
+	•	synchronous_plot.png
+	•	 async_plot.png
+	•	 energy and comfort _comparison.png (Synchronous)
+	•	 energy and comfort_comparison.png(Asynchronous)
+	•	 fault_scenario_plot.png
